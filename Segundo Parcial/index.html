@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franco Rojas</title>
+    <link rel="stylesheet" href="./css/miEstilo.css">
+    <script src="./js/miScript.js" defer type="module"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+<body>
+
+    <header class="row align-items-center">
+        <div class="col-2"><img id="imgHeader" src="./imagenes/header.jpg" alt=""></div>   
+        <nav class=" offset-5 col-4-xl">
+            <div class="enlacesHeader">                
+                <a href="./nosotros.html">Nosotros</a>
+                <a href="./anuncios.html">Anuncios</a>
+                <a href="./blog.html">Blog</a>
+                <a href="./contacto.html">Contacto</a>
+            </div>             
+        </nav>   
+    </header>
+
+    <br>
+    <main>
+        <h1 class="text-center">Administracion</h1>
+        <img src="./imagenes/ppal.jpg" alt="" id="imgPpal">
+    </main>
+    <br>
+    <section>
+        <fieldset id="fieldset" class="border border-success px-3 py-3">
+            <legend>Informacion Del Anuncio</legend>
+            <form action="" id="formulario">
+
+                <label for="txtTitulo">Titulo</label>
+                <input type="text" id="txtTitulo" class="form-control" placeholder="Titulo">
+                
+                <label for="txtDescripcion">Descripcion</label>
+                <input type="text" id="txtDescripcion" class="form-control" placeholder="Descripcion">
+
+                <label >Animal</label>
+                <!-- <div class="paraRadioBtns"> -->
+                    <!-- Perro<input type="radio" name="tipoAnimales" id="radioPerro" value="perro">
+                    Gato<input type="radio" name="tipoAnimales" id="radioGato" value="gato"> -->
+                <!-- </div>                 -->
+                    
+                <div class="form-group form-inline offset-4">
+                    <div class="form-check">
+                        <input type="radio" name="tipoAnimales" id="radioPerro" class="form-check-input" value="perro">
+                        <label for="" class="form-check-label">Perro</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input type="radio" name="tipoAnimales" class="form-check-input ml-3" id="radioGato" value="gato">
+                        <label for="" class="form-check-label">Gato</label>
+                    </div>
+                </div>                    
+                
+
+                <label >Precio</label>
+                <input type="text" id="txtPrecio" class="form-control" placeholder="Precio">
+
+
+                <div class="ultOpcionesFormulario mt-4 mb-3">
+                    <div class="divIconos"> <img class="iconos" src="./imagenes/iconoRaza.png" alt=""><input type="text" id="txtRaza" placeholder="Raza"></div>
+                    
+                    <div class="divIconos"><img class="iconos" src="./imagenes/iconoFecha.svg" alt=""> <input type="date" name="" id="dateFecha"></div>
+                    
+                    <div class="divIconos">
+                        <img src="./imagenes/iconoVacuna.png" class="iconos" alt="">
+                        <select name="" id="">
+                            <option value="si">Si</option>
+                            <option value="no">No</option>
+                        </select>
+                    </div>
+                    
+                                
+                </div>
+
+            </form>
+
+        </fieldset><br>
+        <!-- <div class="divBotonGuardar">             -->
+            <button type="button" id="btnGuardar" class="btnGuardarConIcono"><img src="./imagenes/iconoGuardar.png" alt="" class="iconos"> Guardar</button>
+        <!-- </div>         -->
+
+    </section>
+    <br>
+
+    <div id="botonesModificar">
+        <!-- <button type="button" id="btnModificar" class="botones">Modificar</button>
+        <button type="button" id="btnEliminar" class="botones">Eliminar</button>
+        <button type="button" id="btnCancelar" class="botones">Cancelar</button> -->
+        <button type="button" id="btnModificar" class="btn btn-warning">Modificar</button>
+        <button type="button" id="btnEliminar" class="btn btn-danger ml-3">Eliminar</button>
+        <button type="button" id="btnCancelar" class="btn btn-secondary ml-3">Cancelar</button>
+    </div>    
+    <br>
+
+    <div class="container">
+        <div class="row bg-secondary px-5 border border-dark align-items-center" style="height: 200px;">
+            
+            <div class="col-md-6 ">
+                <fieldset class="form-group">
+                    <legend>Filtrar Animal</legend>
+                    <select name="" id="selectAnimal" class="form-control">
+                        <option value="todos">Todo</option>
+                        <option value="perro">Perro</option>
+                        <option value="gato">Gato</option>
+                    </select>
+                </fieldset>
+            </div>
+
+            <div class="col-md-6">
+                <fieldset class="form-group">
+                    <legend>Promedio</legend>
+                    <input type="text" id="txtPromedio" readonly class="form-control">
+                </fieldset>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container mt-3 ">
+        <div class="form-inline justify-content-center">
+
+            <div class="form-check">
+                <input type="checkbox" name="checkMostrar" id="checkTitulo" value="titulo" checked class="form-check-input">
+                <label for="" class="form-check-label">Titulo</label>
+            </div>
+
+            <div class="form-check ml-3">
+                <input type="checkbox" name="checkMostrar" value="transaccion" checked id="checkTransaccion" class="form-check-input">
+                <label for="" class="form-check-label">Transaccion</label>
+            </div>
+
+            <div class="form-check ml-3">                
+                <input type="checkbox" name="checkMostrar" value="descripcion" checked id="checkDescripcion" class="form-check-input">
+                <label for="" class="form-check-label">Descripcion</label>
+            </div>
+
+            <div class="form-check ml-3">
+
+                <input type="checkbox" name="checkMostrar" value="precio" checked id="checkPrecio" class="form-check-input">
+                <label for="" class="form-check-label">Precio</label>
+            </div>
+
+            <div class="form-check ml-3">
+                <input type="checkbox" name="checkMostrar" value="animal" checked id="checkAnimal" class="form-check-input">
+                <label for="" class="form-check-label">Animal</label>
+            </div>
+
+            <div class="form-check ml-3">
+
+                <input type="checkbox" name="checkMostrar" value="raza" checked id="checkRaza" class="form-check-input">
+                <label for="" class="form-check-label">Raza</label>
+            </div>
+
+            <div class="form-check ml-3">
+
+                <input type="checkbox" name="checkMostrar" value="fechanacimiento" checked id="checknacimiento" class="form-check-input">
+                <label for="" class="form-check-label">Fecha nacimiento</label>
+            </div>
+
+            <div class="form-check ml-3">
+
+                <input type="checkbox" name="checkMostrar" value="vacuna" checked id="checkVacuna" class="form-check-input">
+                <label for="" class="form-check-label">Vacuna</label>
+            </div>
+
+
+        </div>
+    </div>
+
+
+    <br>
+    <section id="contenedorTabla"></section>
+
+    <br>
+    <div id="paraSpinner"></div>
+<br>
+
+
+    
+    <footer class="row justify-content-center align-items-center">
+        <!-- <nav class="navFooter"> -->
+            <nav class="col-md">
+            <a href="./nosotros.html">Nosotros</a>
+            <a href="./anuncios.html">Anuncios</a>
+            <a href="./blog.html">Blog</a>
+            <a href="./contacto.html">Contacto</a>
+        </nav>
+        <p>Todos los derechos reservados &copy;</p>
+    </footer>
+
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>    
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
